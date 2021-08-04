@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Category</th>
+      <th scope="col">More info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+    <tr>
+      <th scope="row"><%= restaurant.id %></th>
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.address %></td>
+      <td><%= restaurant.phone_number %></td>
+      <td><%= restaurant.category %></td>
+      <td><%= link_to "Show more", restaurant_path(restaurant)%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
